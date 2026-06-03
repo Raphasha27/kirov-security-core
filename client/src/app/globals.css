@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    @apply bg-kirov-900 text-gray-200 font-mono;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-kirov-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-kirov-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-kirov-400;
+  }
+
+  input, textarea, select {
+    @apply bg-kirov-800 border border-kirov-600 rounded px-3 py-2 text-gray-200 placeholder-gray-500 outline-none focus:border-kirov-400 focus:ring-1 focus:ring-kirov-400/30 transition-colors;
+  }
+}
+
+@layer components {
+  .terminal-prompt::before {
+    content: '>';
+    @apply text-kirov-accent mr-2 font-bold;
+  }
+
+  .scan-line {
+    @apply border-b border-kirov-700/50;
+  }
+
+  .glass-panel {
+    @apply bg-kirov-800/60 backdrop-blur-sm border border-kirov-700/50 rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    @apply text-kirov-accent;
+  }
+
+  .text-danger {
+    @apply text-kirov-danger;
+  }
+
+  .text-warning {
+    @apply text-kirov-warning;
+  }
+
+  .text-info {
+    @apply text-kirov-info;
+  }
+}
