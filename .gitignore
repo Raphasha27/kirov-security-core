@@ -17,6 +17,13 @@ out/
 # Env
 .env
 .env.local
+.env.production
+
+# Logs
+*.log
+
+# Vercel
+.vercel
 
 # OS
 .DS_Store
